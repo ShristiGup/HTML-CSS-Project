@@ -1,0 +1,271 @@
+/* CSS reset */
+*{
+    margin:0;
+    padding:0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family:"Unna",serif;
+}
+
+/* Navigation Bar */
+#navbar{
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top:0px;
+    z-index:10;
+}
+
+#navbar::before{
+    content:"";
+    background-color: black;
+    position: absolute;
+    height:100%;
+    width:100%;
+    opacity:0.5;
+    z-index: -1;
+    top:0;
+    left:0;
+}
+
+/*  Navigation Bar :Logo and img*/
+#logo{
+    margin:0 25px;
+}
+
+#logo img{
+    margin: 5px 5px;
+    height: 62px;
+    width: 70px;
+}
+
+/* Navigation Bar : List */
+#navbar ul{
+    display:flex;
+}
+
+#navbar ul li{
+   list-style: none;
+    font-size:1.3rem;
+    font-family: 'Baloo Bhai 2', cursive;
+}
+
+#navbar ul li a{
+   display:block;
+   padding:2px 22px;
+   border-radius:20px;
+   text-decoration: none;
+   color:white;
+   text-shadow:2px 2px black;
+
+}
+
+#navbar ul li a:hover{
+   background-color: white;
+   color:black;
+   text-shadow:none;
+
+}
+
+/* Home Section */
+#home{
+    display:flex;
+    flex-direction: column;
+    padding:5px 200px;
+    height:530px;
+    align-items: center;
+    justify-content: center;}
+
+#home::before{
+    content:"";
+    background:url("../img/bg1.jpg") no-repeat center center/cover;
+    position: absolute;
+    height:610px;
+    width:100%;
+    opacity:0.75;
+    z-index: -1;
+    top:0;
+    left:0;
+}
+
+#home h1{
+    color:orange;
+    text-shadow:3px 3px black;
+    text-align:center;
+
+}
+
+#home p{
+    color:black;
+    text-align:center;
+    font-weight: bold;
+    text-shadow:1px 1px black;
+    font-size:1.5rem;
+    padding:5px 5px;
+
+}
+
+/* Services Section */
+#services{
+    margin:28px;
+    display:flex;
+}
+
+#services .box{
+    margin: 0px 25px;
+    border: 2px solid red;
+    padding: 34px;
+    border-radius: 23px;
+    background-color: #ffe7ec;
+    margin-bottom: 25px;
+}
+
+#services .box img{
+    height: 190px;
+    display: block;
+    margin: auto;
+    border-radius: 10px;
+}
+
+/* Clients Section */
+#clients-container{
+    position: relative;
+}
+
+#clients-container h1{
+    padding-top: 20px;
+}
+
+#clients-container::before{
+    content:"";
+    position:absolute;
+    height:100%;
+    width:100%;
+    background: url("../img/bg.jpg");
+    z-index:-1;
+    opacity:0.4;
+}
+
+#clients{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.client-item{
+    padding:34px;
+}
+
+.client-item img{
+   height:120px;
+}
+
+.client-item:first-child{
+   filter:invert(100%);
+}
+
+/* Contact Section */
+#contact{
+    position: relative;
+}
+
+#contact::before{
+    content:"";
+    position: absolute;
+    height:100%;
+    width:100%;
+    background:url("../img/contact.jpg") no-repeat center center/cover;
+    z-index:-1;
+    opacity:0.6;
+}
+
+#contact-box{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 34px;
+}
+
+#contact-box input,
+#contact-box textarea{
+    width:100%;
+    padding: 0.5rem;
+    border: 1px solid black;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-family:"Unna",serif;
+}
+
+#contact-box form{
+    width:40%;
+}
+
+#contact-box label{
+    font-size:1.3rem;
+    font-weight: bold;
+    font-family:"Unna",serif;
+}
+
+/* Footer */
+
+footer{
+    background-color: black;
+    color:white;
+    padding:5px 20px;
+}
+
+.links{
+    display: flex;
+    justify-content: center;
+}
+
+footer ul{
+    display: flex;
+    justify-content: center;
+}
+
+footer ul li{
+    list-style-type: none;
+    cursor: pointer;
+    padding:2px 6px;
+}
+
+/* Utility Classes */
+.h-main{
+    font-size:3rem;
+    padding:12px;
+}
+
+.h-secondary{
+    font-size:2rem;
+    padding:12px;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.btn{
+    padding:6px 20px;
+    color:white;
+    background-color: crimson;
+    border:3px solid white;
+    font-weight: bold;
+    border-radius:20px;
+    margin:20px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background-color .3s ease-in-out;
+}
+
+.btn:hover{
+    color:crimson;
+    background-color: white;
+    border-color:crimson;
+}
